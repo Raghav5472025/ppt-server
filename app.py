@@ -74,8 +74,8 @@ def title_v1(slide, data, P):
     circle(slide, -800000, H-1500000, 2500000, P['secondary'] + '40')
     rect(slide, 0, H-200000, W, 200000, P['primary'])
     if data.get('emoji'): txt(slide, data['emoji'], W//2-500000, 1000000, 1000000, 1000000, size=56, align=PP_ALIGN.CENTER)
-    txt(slide, data.get('title') or data.get('heading','') or data.get('heading',''), 600000, 2200000, W-1200000, 1500000, size=54, bold=True, color='FFFFFF', align=PP_ALIGN.CENTER)
-    if data.get('subtitle') or data.get('subheading'): txt(slide, data['subtitle'], 600000, 3900000, W-1200000, 700000, size=22, color=P['secondary'], italic=True, align=PP_ALIGN.CENTER)
+    txt(slide, data.get('title') or data.get('heading',''), 600000, 2200000, W-1200000, 1500000, size=54, bold=True, color='FFFFFF', align=PP_ALIGN.CENTER)
+    if data.get('subtitle') or data.get('subheading'): txt(slide, data.get('subtitle') or data.get('subheading',''), 600000, 3900000, W-1200000, 700000, size=22, color=P['secondary'], italic=True, align=PP_ALIGN.CENTER)
     txt(slide, 'HackMate AI', 600000, H-500000, W-1200000, 350000, size=11, color='6b7280', align=PP_ALIGN.CENTER)
 
 def title_v2(slide, data, P):
@@ -84,8 +84,8 @@ def title_v2(slide, data, P):
     rect(slide, W//2, 0, W//2, H, 'FFFFFF')
     circle(slide, W//2-1200000, H//2-1200000, 2400000, P['secondary'] + '30')
     if data.get('emoji'): txt(slide, data['emoji'], 200000, 600000, 900000, 900000, size=52)
-    txt(slide, data.get('title') or data.get('heading','') or data.get('heading',''), 200000, 1700000, W//2-400000, 1800000, size=42, bold=True, color='FFFFFF')
-    if data.get('subtitle') or data.get('subheading'): txt(slide, data['subtitle'], 200000, 3700000, W//2-400000, 800000, size=18, color='E0D7FF', italic=True)
+    txt(slide, data.get('title') or data.get('heading',''), 200000, 1700000, W//2-400000, 1800000, size=42, bold=True, color='FFFFFF')
+    if data.get('subtitle') or data.get('subheading'): txt(slide, data.get('subtitle') or data.get('subheading',''), 200000, 3700000, W//2-400000, 800000, size=18, color='E0D7FF', italic=True)
     txt(slide, 'HackMate AI', 200000, H-500000, W//2-400000, 350000, size=11, color='C4B5FD')
     # Right side decoration
     circle(slide, W//2+400000, 800000, 1200000, P['light'])
@@ -100,8 +100,8 @@ def title_v3(slide, data, P):
     circle(slide, 200000, 200000, 1200000, P['light'])
     circle(slide, W-1600000, 400000, 2000000, P['light'])
     if data.get('emoji'): txt(slide, data['emoji'], W//2-400000, 700000, 800000, 800000, size=48, align=PP_ALIGN.CENTER)
-    txt(slide, data.get('title') or data.get('heading','') or data.get('heading',''), 400000, 1700000, W-800000, 1500000, size=52, bold=True, color=P['dark'], align=PP_ALIGN.CENTER)
-    if data.get('subtitle') or data.get('subheading'): txt(slide, data['subtitle'], 400000, H-1600000, W-800000, 600000, size=20, color='FFFFFF', italic=True, align=PP_ALIGN.CENTER)
+    txt(slide, data.get('title') or data.get('heading',''), 400000, 1700000, W-800000, 1500000, size=52, bold=True, color=P['dark'], align=PP_ALIGN.CENTER)
+    if data.get('subtitle') or data.get('subheading'): txt(slide, data.get('subtitle') or data.get('subheading',''), 400000, H-1600000, W-800000, 600000, size=20, color='FFFFFF', italic=True, align=PP_ALIGN.CENTER)
     txt(slide, 'HackMate AI', 400000, H-800000, W-800000, 350000, size=11, color='C4B5FD', align=PP_ALIGN.CENTER)
 
 def title_v4(slide, data, P):
@@ -114,8 +114,8 @@ def title_v4(slide, data, P):
     circle(slide, W-1800000, 200000, 1400000, P['secondary']+'40')
     circle(slide, 400000, H//2+200000, 1000000, P['secondary']+'30')
     if data.get('emoji'): txt(slide, data['emoji'], 500000, 500000, 900000, 900000, size=50)
-    txt(slide, data.get('title') or data.get('heading','') or data.get('heading',''), 500000, 1500000, W-1000000, 1500000, size=48, bold=True, color='FFFFFF')
-    if data.get('subtitle') or data.get('subheading'): txt(slide, data['subtitle'], 500000, H//2+200000, W-1000000, 700000, size=20, color=P['secondary'], italic=True)
+    txt(slide, data.get('title') or data.get('heading',''), 500000, 1500000, W-1000000, 1500000, size=48, bold=True, color='FFFFFF')
+    if data.get('subtitle') or data.get('subheading'): txt(slide, data.get('subtitle') or data.get('subheading',''), 500000, H//2+200000, W-1000000, 700000, size=20, color=P['secondary'], italic=True)
     txt(slide, 'HackMate AI', 500000, H-500000, W-1000000, 350000, size=11, color='6b7280')
 
 TITLE_VARIANTS = [title_v1, title_v2, title_v3, title_v4]
@@ -128,9 +128,9 @@ def problem_v1(slide, data, P):
     rect(slide, 0, 0, 3000000, H, P['dark'])
     rect(slide, 3000000, 0, W-3000000, H, 'FFFFFF')
     if data.get('emoji'): txt(slide, data['emoji'], 200000, 400000, 800000, 800000, size=40)
-    txt(slide, data.get('title') or data.get('heading','') or data.get('heading',''), 200000, 1300000, 2600000, 800000, size=28, bold=True, color='FFFFFF')
+    txt(slide, data.get('title') or data.get('heading',''), 200000, 1300000, 2600000, 800000, size=28, bold=True, color='FFFFFF')
     if data.get('headline'): txt(slide, data['headline'], 200000, 2300000, 2600000, 1400000, size=15, color=P['secondary'], italic=True)
-    items = data.get('content') or data.get('bullets',[]) or data.get('bullets',[])
+    items = data.get('content') or data.get('bullets',[])
     ch, gap = 1500000, 150000
     sy = (H-(len(items[:3])*ch+(len(items[:3])-1)*gap))//2
     for i, b in enumerate(items[:3]):
@@ -144,9 +144,9 @@ def problem_v2(slide, data, P):
     """Top header + 3 horizontal stat bars"""
     rect(slide, 0, 0, W, 1400000, P['primary'])
     if data.get('emoji'): txt(slide, data['emoji'], 300000, 280000, 700000, 700000, size=34)
-    txt(slide, data.get('title') or data.get('heading','') or data.get('heading',''), 1100000, 320000, W-1400000, 700000, size=30, bold=True, color='FFFFFF')
+    txt(slide, data.get('title') or data.get('heading',''), 1100000, 320000, W-1400000, 700000, size=30, bold=True, color='FFFFFF')
     if data.get('headline'): txt(slide, data['headline'], 1100000, 980000, W-1400000, 370000, size=15, color='E0D7FF', italic=True)
-    items = data.get('content') or data.get('bullets',[]) or data.get('bullets',[])
+    items = data.get('content') or data.get('bullets',[])
     icons = ['⚠️','❌','😰']
     for i, b in enumerate(items[:3]):
         y = 1700000 + i*1500000
@@ -160,8 +160,8 @@ def problem_v3(slide, data, P):
     circle(slide, -500000, -500000, 2000000, P['primary']+'30')
     circle(slide, W-1500000, H-1500000, 2000000, P['secondary']+'20')
     if data.get('emoji'): txt(slide, data['emoji'], 400000, 300000, 700000, 700000, size=34)
-    txt(slide, data.get('title') or data.get('heading','') or data.get('heading',''), 1200000, 320000, W-1600000, 700000, size=30, bold=True, color='FFFFFF')
-    items = data.get('content') or data.get('bullets',[]) or data.get('bullets',[])
+    txt(slide, data.get('title') or data.get('heading',''), 1200000, 320000, W-1600000, 700000, size=30, bold=True, color='FFFFFF')
+    items = data.get('content') or data.get('bullets',[])
     cw, gap = 2700000, 150000
     sx = (W-(3*cw+2*gap))//2
     for i, b in enumerate(items[:3]):
@@ -177,10 +177,10 @@ def problem_v4(slide, data, P):
     rect(slide, 0, 0, 120000, H, P['primary'])
     rect(slide, 0, 0, W, 1200000, P['light'])
     if data.get('emoji'): txt(slide, data['emoji'], 300000, 250000, 650000, 650000, size=30)
-    txt(slide, data.get('title') or data.get('heading','') or data.get('heading',''), 1050000, 280000, W-1400000, 650000, size=28, bold=True, color=P['dark'])
+    txt(slide, data.get('title') or data.get('heading',''), 1050000, 280000, W-1400000, 650000, size=28, bold=True, color=P['dark'])
     if data.get('headline'):
         txt(slide, f'"{data["headline"]}"', 300000, 1350000, W-600000, 500000, size=18, bold=True, color=P['primary'], italic=True)
-    items = data.get('content') or data.get('bullets',[]) or data.get('bullets',[])
+    items = data.get('content') or data.get('bullets',[])
     for i, b in enumerate(items[:3]):
         y = 2100000 + i*1400000
         circle(slide, 250000, y+100000, 600000, P['primary'])
@@ -198,9 +198,9 @@ def solution_v1(slide, data, P):
     """Header + 3 cards in row"""
     rect(slide, 0, 0, W, 1400000, P['primary'])
     if data.get('emoji'): txt(slide, data['emoji'], 300000, 250000, 700000, 700000, size=34)
-    txt(slide, data.get('title') or data.get('heading','') or data.get('heading',''), 1100000, 300000, W-1500000, 700000, size=30, bold=True, color='FFFFFF')
+    txt(slide, data.get('title') or data.get('heading',''), 1100000, 300000, W-1500000, 700000, size=30, bold=True, color='FFFFFF')
     if data.get('headline'): txt(slide, data['headline'], 1100000, 970000, W-1500000, 370000, size=15, color='E0D7FF', italic=True)
-    items = data.get('content') or data.get('bullets',[]) or data.get('bullets',[])
+    items = data.get('content') or data.get('bullets',[])
     icons = ['💡','⚡','🎯','🔥','✨']
     cw, gap = 2700000, 150000
     sx = (W-(3*cw+2*gap))//2
@@ -216,9 +216,9 @@ def solution_v2(slide, data, P):
     rect(slide, 0, 0, W, H, P['dark'])
     circle(slide, W-1000000, -500000, 2000000, P['primary']+'40')
     if data.get('emoji'): txt(slide, data['emoji'], 400000, 300000, 700000, 700000, size=34)
-    txt(slide, data.get('title') or data.get('heading','') or data.get('heading',''), 1200000, 320000, W-1600000, 700000, size=30, bold=True, color='FFFFFF')
+    txt(slide, data.get('title') or data.get('heading',''), 1200000, 320000, W-1600000, 700000, size=30, bold=True, color='FFFFFF')
     if data.get('headline'): txt(slide, data['headline'], 400000, 1200000, W-800000, 450000, size=18, bold=True, color=P['secondary'])
-    items = data.get('content') or data.get('bullets',[]) or data.get('bullets',[])
+    items = data.get('content') or data.get('bullets',[])
     for i, b in enumerate(items[:4]):
         y = 1900000 + i*1100000
         rect(slide, 400000, y, W-800000, 900000, P['primary']+'35')
@@ -232,8 +232,8 @@ def solution_v3(slide, data, P):
     rect(slide, 0, 0, W, 1300000, P['light'])
     rect(slide, 0, 0, 120000, H, P['primary'])
     if data.get('emoji'): txt(slide, data['emoji'], 300000, 250000, 650000, 650000, size=30)
-    txt(slide, data.get('title') or data.get('heading','') or data.get('heading',''), 1050000, 280000, W-1400000, 650000, size=28, bold=True, color=P['dark'])
-    items = data.get('content') or data.get('bullets',[]) or data.get('bullets',[])
+    txt(slide, data.get('title') or data.get('heading',''), 1050000, 280000, W-1400000, 650000, size=28, bold=True, color=P['dark'])
+    items = data.get('content') or data.get('bullets',[])
     # Card 1 big left
     rect(slide, 300000, 1500000, 4200000, H-2000000, P['primary'])
     txt(slide, '💡', 300000+400000, 1700000, 700000, 700000, size=32)
@@ -250,8 +250,8 @@ def solution_v4(slide, data, P):
     rect(slide, 0, 0, W, H, P['bg'])
     rect(slide, 0, 0, W, 1300000, P['primary'])
     if data.get('emoji'): txt(slide, data['emoji'], 300000, 250000, 700000, 700000, size=34)
-    txt(slide, data.get('title') or data.get('heading','') or data.get('heading',''), 1100000, 300000, W-1500000, 700000, size=30, bold=True, color='FFFFFF')
-    items = data.get('content') or data.get('bullets',[]) or data.get('bullets',[])
+    txt(slide, data.get('title') or data.get('heading',''), 1100000, 300000, W-1500000, 700000, size=30, bold=True, color='FFFFFF')
+    items = data.get('content') or data.get('bullets',[])
     for i, b in enumerate(items[:4]):
         y = 1500000 + i*1300000
         txt(slide, f'0{i+1}', 300000, y, 900000, 1100000, size=60, bold=True, color=P['primary']+'40')
@@ -267,8 +267,8 @@ def how_v1(slide, data, P):
     """Horizontal steps with arrows"""
     rect(slide, 0, 0, W, 1200000, P['light'])
     if data.get('emoji'): txt(slide, data['emoji'], 300000, 250000, 650000, 650000, size=30)
-    txt(slide, data.get('title') or data.get('heading','') or data.get('heading',''), 1050000, 280000, W-1400000, 650000, size=28, bold=True, color=P['dark'])
-    steps = data.get('steps') or data.get('content') or data.get('bullets',[]) or data.get('bullets',[])
+    txt(slide, data.get('title') or data.get('heading',''), 1050000, 280000, W-1400000, 650000, size=28, bold=True, color=P['dark'])
+    steps = data.get('steps') or data.get('content') or data.get('bullets',[])
     n = min(len(steps), 4)
     if not n: return
     sw, aw = 1900000, 250000
@@ -288,10 +288,10 @@ def how_v2(slide, data, P):
     rect(slide, 0, 0, 120000, H, P['primary'])
     rect(slide, 0, 0, W, 1200000, P['light'])
     if data.get('emoji'): txt(slide, data['emoji'], 300000, 250000, 650000, 650000, size=30)
-    txt(slide, data.get('title') or data.get('heading','') or data.get('heading',''), 1050000, 280000, W-1400000, 650000, size=28, bold=True, color=P['dark'])
+    txt(slide, data.get('title') or data.get('heading',''), 1050000, 280000, W-1400000, 650000, size=28, bold=True, color=P['dark'])
     # Center vertical line
     rect(slide, W//2-30000, 1400000, 60000, H-1700000, P['light'])
-    steps = data.get('steps') or data.get('content') or data.get('bullets',[]) or data.get('bullets',[])
+    steps = data.get('steps') or data.get('content') or data.get('bullets',[])
     for i, s in enumerate(steps[:4]):
         y = 1500000 + i*1250000
         left = i % 2 == 0
@@ -310,8 +310,8 @@ def how_v3(slide, data, P):
     rect(slide, 0, 0, W, H, P['dark'])
     circle(slide, -400000, -400000, 1800000, P['primary']+'30')
     if data.get('emoji'): txt(slide, data['emoji'], 400000, 300000, 700000, 700000, size=34)
-    txt(slide, data.get('title') or data.get('heading','') or data.get('heading',''), 1200000, 320000, W-1600000, 700000, size=30, bold=True, color='FFFFFF')
-    steps = data.get('steps') or data.get('content') or data.get('bullets',[]) or data.get('bullets',[])
+    txt(slide, data.get('title') or data.get('heading',''), 1200000, 320000, W-1600000, 700000, size=30, bold=True, color='FFFFFF')
+    steps = data.get('steps') or data.get('content') or data.get('bullets',[])
     for i, s in enumerate(steps[:4]):
         y = 1400000 + i*1300000
         w_box = W - 800000 - i*600000
@@ -327,8 +327,8 @@ def how_v4(slide, data, P):
     rect(slide, 0, 0, W, H, P['bg'])
     rect(slide, 0, 0, W, 1300000, P['primary'])
     if data.get('emoji'): txt(slide, data['emoji'], 300000, 280000, 700000, 700000, size=34)
-    txt(slide, data.get('title') or data.get('heading','') or data.get('heading',''), 1100000, 320000, W-1500000, 650000, size=28, bold=True, color='FFFFFF')
-    steps = data.get('steps') or data.get('content') or data.get('bullets',[]) or data.get('bullets',[])
+    txt(slide, data.get('title') or data.get('heading',''), 1100000, 320000, W-1500000, 650000, size=28, bold=True, color='FFFFFF')
+    steps = data.get('steps') or data.get('content') or data.get('bullets',[])
     cw = (W-700000)//2
     ch = (H-1800000)//2
     gap = 200000
@@ -351,9 +351,9 @@ def tech_v1(slide, data, P):
     rect(slide, 0, 0, 120000, H, P['primary'])
     rect(slide, 0, 0, W, 1200000, P['light'])
     if data.get('emoji'): txt(slide, data['emoji'], 300000, 250000, 650000, 650000, size=30)
-    txt(slide, data.get('title') or data.get('heading','') or data.get('heading',''), 1050000, 280000, W-1400000, 650000, size=28, bold=True, color=P['dark'])
+    txt(slide, data.get('title') or data.get('heading',''), 1050000, 280000, W-1400000, 650000, size=28, bold=True, color=P['dark'])
     rect(slide, 300000, 1200000, W-600000, 40000, P['primary'])
-    items = data.get('content') or data.get('bullets',[]) or data.get('bullets',[])
+    items = data.get('content') or data.get('bullets',[])
     for i, item in enumerate(items[:8]):
         x = 400000 if i<4 else W//2+100000
         y = 1450000 + (i%4)*680000
@@ -365,8 +365,8 @@ def tech_v2(slide, data, P):
     """Card grid"""
     rect(slide, 0, 0, W, H, P['dark'])
     if data.get('emoji'): txt(slide, data['emoji'], 400000, 300000, 700000, 700000, size=34)
-    txt(slide, data.get('title') or data.get('heading','') or data.get('heading',''), 1200000, 320000, W-1600000, 700000, size=30, bold=True, color='FFFFFF')
-    items = data.get('content') or data.get('bullets',[]) or data.get('bullets',[])
+    txt(slide, data.get('title') or data.get('heading',''), 1200000, 320000, W-1600000, 700000, size=30, bold=True, color='FFFFFF')
+    items = data.get('content') or data.get('bullets',[])
     cw = (W-700000)//2
     ch = 1100000
     gap = 150000
@@ -383,8 +383,8 @@ def tech_v3(slide, data, P):
     rect(slide, 0, 0, W, H, 'FFFFFF')
     rect(slide, 0, 0, W, 1300000, P['primary'])
     if data.get('emoji'): txt(slide, data['emoji'], 300000, 280000, 700000, 700000, size=34)
-    txt(slide, data.get('title') or data.get('heading','') or data.get('heading',''), 1100000, 320000, W-1500000, 650000, size=28, bold=True, color='FFFFFF')
-    items = data.get('content') or data.get('bullets',[]) or data.get('bullets',[])
+    txt(slide, data.get('title') or data.get('heading',''), 1100000, 320000, W-1500000, 650000, size=28, bold=True, color='FFFFFF')
+    items = data.get('content') or data.get('bullets',[])
     colors = [P['primary'], P['secondary'], '374151', '6d28d9', '0369a1', '065f46', '9f1239', '92400e']
     x, y = 300000, 1500000
     for i, item in enumerate(items[:8]):
@@ -404,7 +404,7 @@ def impact_v1(slide, data, P):
     """3 big stat cards"""
     rect(slide, 0, 0, W, H, P['light'])
     if data.get('emoji'): txt(slide, data['emoji'], 300000, 280000, 650000, 650000, size=30)
-    txt(slide, data.get('title') or data.get('heading','') or data.get('heading',''), 1050000, 320000, W-1400000, 600000, size=28, bold=True, color=P['dark'])
+    txt(slide, data.get('title') or data.get('heading',''), 1050000, 320000, W-1400000, 600000, size=28, bold=True, color=P['dark'])
     stats = data.get('stats', [])
     cw, ch, gap = 2700000, 3400000, 150000
     sx = (W-(3*cw+2*gap))//2
@@ -420,7 +420,7 @@ def impact_v2(slide, data, P):
     rect(slide, 0, 0, W, H, P['dark'])
     circle(slide, W//2-600000, H//2-600000, 1200000, P['primary']+'15')
     if data.get('emoji'): txt(slide, data['emoji'], 400000, 300000, 700000, 700000, size=34)
-    txt(slide, data.get('title') or data.get('heading','') or data.get('heading',''), 1200000, 320000, W-1600000, 700000, size=30, bold=True, color='FFFFFF')
+    txt(slide, data.get('title') or data.get('heading',''), 1200000, 320000, W-1600000, 700000, size=30, bold=True, color='FFFFFF')
     stats = data.get('stats', [])
     for i, s in enumerate(stats[:3]):
         y = 1600000 + i*1500000
@@ -433,7 +433,7 @@ def impact_v3(slide, data, P):
     rect(slide, 0, 0, W, H, 'FFFFFF')
     rect(slide, 0, 0, W, 1300000, P['primary'])
     if data.get('emoji'): txt(slide, data['emoji'], 300000, 280000, 700000, 700000, size=34)
-    txt(slide, data.get('title') or data.get('heading','') or data.get('heading',''), 1100000, 320000, W-1500000, 650000, size=28, bold=True, color='FFFFFF')
+    txt(slide, data.get('title') or data.get('heading',''), 1100000, 320000, W-1500000, 650000, size=28, bold=True, color='FFFFFF')
     stats = data.get('stats', [])
     cw = W//3
     for i, s in enumerate(stats[:3]):
@@ -452,8 +452,8 @@ def demo_v1(slide, data, P):
     """2x2 grid"""
     rect(slide, 0, 0, W, 1300000, P['dark'])
     if data.get('emoji'): txt(slide, data['emoji'], 300000, 260000, 650000, 650000, size=30)
-    txt(slide, data.get('title') or data.get('heading','') or data.get('heading',''), 1050000, 300000, W-1400000, 600000, size=28, bold=True, color='FFFFFF')
-    features = data.get('content') or data.get('bullets',[]) or data.get('bullets',[])
+    txt(slide, data.get('title') or data.get('heading',''), 1050000, 300000, W-1400000, 600000, size=28, bold=True, color='FFFFFF')
+    features = data.get('content') or data.get('bullets',[])
     icons = ['🚀','⚡','🔒','📊','🎯','💡']
     cw, ch, gap = (W-600000)//2, (H-1800000)//2, 200000
     for i, f in enumerate(features[:4]):
@@ -468,8 +468,8 @@ def demo_v2(slide, data, P):
     rect(slide, 0, 0, W, H, P['dark'])
     circle(slide, W-1200000, -400000, 2000000, P['primary']+'30')
     if data.get('emoji'): txt(slide, data['emoji'], 400000, 300000, 700000, 700000, size=34)
-    txt(slide, data.get('title') or data.get('heading','') or data.get('heading',''), 1200000, 320000, W-1600000, 700000, size=30, bold=True, color='FFFFFF')
-    features = data.get('content') or data.get('bullets',[]) or data.get('bullets',[])
+    txt(slide, data.get('title') or data.get('heading',''), 1200000, 320000, W-1600000, 700000, size=30, bold=True, color='FFFFFF')
+    features = data.get('content') or data.get('bullets',[])
     icons = ['🚀','⚡','🔒','📊','🎯','💡','🌟','🔥']
     for i, f in enumerate(features[:5]):
         y = 1400000 + i*1000000
@@ -482,8 +482,8 @@ def demo_v3(slide, data, P):
     rect(slide, 0, 0, W, H, P['bg'])
     rect(slide, 0, 0, W, 1300000, P['primary'])
     if data.get('emoji'): txt(slide, data['emoji'], 300000, 280000, 700000, 700000, size=34)
-    txt(slide, data.get('title') or data.get('heading','') or data.get('heading',''), 1100000, 320000, W-1500000, 650000, size=28, bold=True, color='FFFFFF')
-    features = data.get('content') or data.get('bullets',[]) or data.get('bullets',[])
+    txt(slide, data.get('title') or data.get('heading',''), 1100000, 320000, W-1500000, 650000, size=28, bold=True, color='FFFFFF')
+    features = data.get('content') or data.get('bullets',[])
     card_colors = [P['primary'], P['secondary'], '374151', '0369a1']
     cw = (W-700000)//2
     ch = (H-1900000)//2
@@ -504,7 +504,7 @@ def team_v1(slide, data, P):
     """Avatar circles"""
     rect(slide, 0, 0, W, 1400000, P['primary'])
     if data.get('emoji'): txt(slide, data['emoji'], 300000, 300000, 700000, 700000, size=32)
-    txt(slide, data.get('title') or data.get('heading','') or data.get('heading',''), 1100000, 350000, W-1400000, 600000, size=30, bold=True, color='FFFFFF')
+    txt(slide, data.get('title') or data.get('heading',''), 1100000, 350000, W-1400000, 600000, size=30, bold=True, color='FFFFFF')
     members = data.get('members', [])
     n = max(1, min(len(members), 4))
     cw = min(2000000, (W-800000)//n)
@@ -525,7 +525,7 @@ def team_v2(slide, data, P):
     """Dark cards"""
     rect(slide, 0, 0, W, H, P['dark'])
     if data.get('emoji'): txt(slide, data['emoji'], 400000, 300000, 700000, 700000, size=34)
-    txt(slide, data.get('title') or data.get('heading','') or data.get('heading',''), 1200000, 320000, W-1600000, 700000, size=30, bold=True, color='FFFFFF')
+    txt(slide, data.get('title') or data.get('heading',''), 1200000, 320000, W-1600000, 700000, size=30, bold=True, color='FFFFFF')
     members = data.get('members', [])
     n = max(1, min(len(members), 4))
     cw = min(2000000, (W-800000)//n)
@@ -548,7 +548,7 @@ def team_v3(slide, data, P):
     rect(slide, 0, 0, 120000, H, P['primary'])
     rect(slide, 0, 0, W, 1300000, P['light'])
     if data.get('emoji'): txt(slide, data['emoji'], 300000, 250000, 650000, 650000, size=30)
-    txt(slide, data.get('title') or data.get('heading','') or data.get('heading',''), 1050000, 280000, W-1400000, 650000, size=28, bold=True, color=P['dark'])
+    txt(slide, data.get('title') or data.get('heading',''), 1050000, 280000, W-1400000, 650000, size=28, bold=True, color=P['dark'])
     members = data.get('members', [])
     for i, m in enumerate(members[:4]):
         y = 1500000 + i*1300000
@@ -570,7 +570,7 @@ def closing_v1(slide, data, P):
     circle(slide, -600000, H-1000000, 2000000, P['secondary']+'40')
     if data.get('emoji'): txt(slide, data['emoji'], W//2-400000, 1200000, 800000, 800000, size=48, align=PP_ALIGN.CENTER)
     txt(slide, data.get('title','Thank You'), 457200, 2300000, W-914400, 1000000, size=48, bold=True, color='FFFFFF', align=PP_ALIGN.CENTER)
-    if data.get('subtitle') or data.get('subheading'): txt(slide, data['subtitle'], 457200, 3500000, W-914400, 600000, size=20, color=P['secondary'], italic=True, align=PP_ALIGN.CENTER)
+    if data.get('subtitle') or data.get('subheading'): txt(slide, data.get('subtitle') or data.get('subheading',''), 457200, 3500000, W-914400, 600000, size=20, color=P['secondary'], italic=True, align=PP_ALIGN.CENTER)
     txt(slide, 'Built with HackMate AI', 457200, H-600000, W-914400, 400000, size=12, color='6b7280', align=PP_ALIGN.CENTER)
 
 def closing_v2(slide, data, P):
@@ -578,7 +578,7 @@ def closing_v2(slide, data, P):
     rect(slide, 0, H-2000000, W, 2000000, P['dark'])
     if data.get('emoji'): txt(slide, data['emoji'], W//2-400000, 800000, 800000, 800000, size=56, align=PP_ALIGN.CENTER)
     txt(slide, data.get('title','Thank You'), 457200, 1900000, W-914400, 1200000, size=52, bold=True, color='FFFFFF', align=PP_ALIGN.CENTER)
-    if data.get('subtitle') or data.get('subheading'): txt(slide, data['subtitle'], 457200, H-1700000, W-914400, 700000, size=22, color=P['secondary'], italic=True, align=PP_ALIGN.CENTER)
+    if data.get('subtitle') or data.get('subheading'): txt(slide, data.get('subtitle') or data.get('subheading',''), 457200, H-1700000, W-914400, 700000, size=22, color=P['secondary'], italic=True, align=PP_ALIGN.CENTER)
 
 def closing_v3(slide, data, P):
     rect(slide, 0, 0, W, H, 'FFFFFF')
@@ -586,7 +586,7 @@ def closing_v3(slide, data, P):
     circle(slide, W//2-1500000, H//2-1500000, 3000000, P['primary']+'15')
     if data.get('emoji'): txt(slide, data['emoji'], W//2-400000, 800000, 800000, 800000, size=48, align=PP_ALIGN.CENTER)
     txt(slide, data.get('title','Thank You'), 457200, 2000000, W-914400, 1200000, size=52, bold=True, color=P['dark'], align=PP_ALIGN.CENTER)
-    if data.get('subtitle') or data.get('subheading'): txt(slide, data['subtitle'], 457200, 3400000, W-914400, 700000, size=20, color=P['primary'], italic=True, align=PP_ALIGN.CENTER)
+    if data.get('subtitle') or data.get('subheading'): txt(slide, data.get('subtitle') or data.get('subheading',''), 457200, 3400000, W-914400, 700000, size=20, color=P['primary'], italic=True, align=PP_ALIGN.CENTER)
     rect(slide, W//4, H-800000, W//2, 8000, P['primary'])
 
 CLOSING_VARIANTS = [closing_v1, closing_v2, closing_v3]
@@ -605,9 +605,9 @@ def build_slide(slide, data, palette, variants_map):
         # Default fallback
         rect(slide, 0, 0, 120000, H, palette['primary'])
         rect(slide, 0, 0, W, 1200000, palette['light'])
-        txt(slide, data.get('title') or data.get('heading','') or data.get('heading',''), 300000, 280000, W-600000, 650000, size=28, bold=True, color=palette['dark'])
+        txt(slide, data.get('title') or data.get('heading',''), 300000, 280000, W-600000, 650000, size=28, bold=True, color=palette['dark'])
         if data.get('content') or data.get('bullets',[]):
-            bullets(slide, data['content'], 300000, 1400000, W-600000, H-1700000, size=16, color='374151')
+            bullets(slide, data.get('content') or data.get('bullets',[]), 300000, 1400000, W-600000, H-1700000, size=16, color='374151')
 
 VARIANTS_MAP = {
     'title': TITLE_VARIANTS,
